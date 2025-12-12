@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reog Ponorogo - Warisan Budaya Nusantara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Reog Ponorogo</h1>
+        <p>Warisan Budaya yang Megah dan Penuh Filosofi</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#sejarah">Sejarah</a>
+        <a href="#tokoh">Tokoh</a>
+        <a href="#musik">Musik</a>
+        <a href="#galeri">Galeri</a>
+    </nav>
+
+    <main>
+
+        <!-- SEJARAH -->
+        <section id="sejarah" class="content-section">
+            <h2>📜 Sejarah Reog Ponorogo</h2>
+            <p>Reog Ponorogo merupakan pertunjukan seni tradisional dari Jawa Timur dengan unsur mistis, tari, musik,
+                dan kostum megah.</p>
+
+                <a href="next.html" class="btn-n">Lihat Sejarah Lengkap</a>
+                
+            <div id="sejarah-detail" class="hidden">
+                <p>
+                    Dalam legenda, Reog dikaitkan dengan perlawanan Ki Ageng Kutu terhadap Raja Majapahit.
+                    Singo Barong melambangkan kekuasaan tirani yang ingin digulingkan.
+                    Reog menjadi simbol keberanian dan kejantanan masyarakat Ponorogo.
+                </p>
+            </div>
+        </section>
+
+        <!-- TOKOH REOG -->
+        <section id="tokoh" class="content-section">
+            <h2>🧿 Tokoh dalam Reog Ponorogo</h2>
+            <div class="card-container">
+
+                <div class="tokoh-card" data-tokoh="warok">
+                    <h3>Warok</h3>
+                    <p>Warok adalah tokoh sentral dan sakral dalam Reog Ponorogo. Ia digambarkan sebagai sosok pria yang sakti, bijaksana, dan berwibawa tinggi. Warok menjalani tirakat dan menjadi penjaga spiritual, serta simbol kebijaksanaan, kekuatan batin, dan integritas moral. Dalam pertunjukan, Warok berperan memimpin dan menjaga keseimbangan, menunjukkan nilai pengendalian diri, keberanian, dan keteguhan hati.</p>
+                </div>
+
+                <div class="tokoh-card" data-tokoh="jathil">
+                    <h3>Jathil</h3>
+                    <p>Jathil adalah penari berkuda yang lincah dan gesit, biasanya menampilkan gerakan elegan yang menyerupai menunggang kuda. Tokoh ini melambangkan keberanian, kesetiaan, dan kegagahan prajurit. Penampilan Jathil sering digunakan untuk mengekspresikan keindahan gerak dan ritme pertunjukan, sekaligus menggambarkan semangat pengabdian terhadap Raja Klono Sewandono.</p>
+                </div>
+
+                <div class="tokoh-card" data-tokoh="ganong">
+                    <h3>Bujang Ganong</h3>
+                    <p>Bujang Ganong adalah tokoh penghibur dan penari akrobatik muda. Ia digambarkan dengan topeng merah, hidung panjang, mata melotot, gigi tonggos, dan rambut gimbal. Bujang Ganong terkenal dengan gerakan lincah, salto, dan ekspresi lucu yang menghibur penonton. Filosofinya mencerminkan kecerdikan, semangat muda, keberanian, dan loyalitas. Tokoh ini juga menunjukkan bahwa keberanian dan kecerdikan bisa digunakan untuk mengabdi dan melindungi kebaikan.</p>
+                </div>
+
+            </div    class="tokoh-card" data-tokoh="ganong">
+                    <h3>Singo Barong</h3>
+                    <p>Singo Barong adalah ikon utama Reog, berupa topeng singa besar berhias bulu merak. Ia melambangkan kekuatan besar, rintangan hidup, dan tirani yang harus dikendalikan. Filosofinya mengajarkan tentang pengendalian diri, kekuatan batin, dan keberanian untuk menghadapi tantangan hidup. Bulu merak di atasnya juga melambangkan godaan dunia seperti keindahan, hawa nafsu, dan kekuasaan yang harus diimbangi dengan kebijaksanaan Warok.</p>
+        </section>
+
+        <!-- MUSIK -->
+        <section id="musik" class="content-section">
+            <h2>🎶 Alat Musik Reog</h2>
+            <ul id="musik-list">
+                <li data-alat="gong">Gong</li>
+                <li data-alat="kendang">Kendang</li>
+                <li data-alat="kenong">Kenong</li>
+                <li data-alat="slompret">Slompret</li>
+            </ul>
+        </section>
+
+        <!-- GALERI -->
+        <section id="galeri" class="content-section">
+            <h2>📸 Galeri Reog Ponorogo</h2>
+            <div class="galeri-grid">
+                <div class="galeri-item">
+                    <img src="singabarong.jpg" alt="Singo Barong">
+                    <p>Singo Barong – Maskot Reog</p>
+                </div>
+
+                <div class="galeri-item">
+                    <img src="jathil.jpg" alt="Jathil Dance">
+                    <p>Penari Jathil</p>
+                </div>
+
+                <div class="galeri-item">
+                    <img src="reogponorog.jpg" alt="Performance">
+                    <p>Pertunjukan Reog</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 | Website Reog Ponorogo Tradisional</p>
+    </footer>
+
+    <script src="script.js">
+        // === SEJARAH ===
+        const btnSejarah = document.getElementById("btn-sejarah");
+        const sejarahDetail = document.getElementById("sejarah-detail");
+
+        btnSejarah.addEventListener("click", () => {
+            sejarahDetail.classList.toggle("hidden");
+
+            btnSejarah.textContent = sejarahDetail.classList.contains("hidden")
+                ? "Lihat Sejarah Lengkap"
+                : "Sembunyikan Sejarah";
+        });
+
+        // === TOKOH ===
+        document.querySelectorAll(".tokoh-card").forEach(card => {
+            card.addEventListener("click", () => {
+                const tokoh = card.dataset.tokoh;
+
+                let info = "";
+
+                if (tokoh === "warok") {
+                    info = "Warok adalah simbol kesaktian, keberanian, dan kebijaksanaan.";
+                } else if (tokoh === "jathil") {
+                    info = "Jathil adalah penari berkuda yang gesit dan elegan.";
+                } else if (tokoh === "ganong") {
+                    info = "Bujang Ganong adalah tokoh lucu, cekatan, dan penuh energi.";
+                }
+
+                alert(info);
+            });
+        });
+
+        // === ALAT MUSIK ===
+        document.querySelectorAll("#musik-list li").forEach(item => {
+            item.addEventListener("click", () => {
+                const alat = item.dataset.alat;
+
+                let pesan = "";
+                switch (alat) {
+                    case "gong": pesan = "Gong memberi tanda akhir dalam sebuah irama."; break;
+                    case "kendang": pesan = "Kendang mengatur tempo dan dinamika."; break;
+                    case "kenong": pesan = "Kenong menjadi penanda irama dan aksen."; break;
+                    case "slompret": pesan = "Slompret menghasilkan melodi khas Reog."; break;
+                }
+                alert(pesan);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
